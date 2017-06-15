@@ -17,8 +17,9 @@ fun example0(list: List<Int>) {
 }
 
 fun Shop.getSetOfCustomers(): Set<Customer> {
+    return this.customers.toSet()
     // Return a set containing all the customers of this shop
-    todoCollectionTask()
+    //todoCollectionTask()
 //    return this.customers
 }
 

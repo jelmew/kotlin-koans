@@ -9,13 +9,15 @@ fun example1(list: List<Int>) {
 }
 
 fun Shop.getCitiesCustomersAreFrom(): Set<City> {
+    return customers.map { it -> it.city }.toSet()
     // Return the set of cities the customers are from
-    todoCollectionTask()
+    //todoCollectionTask()
 }
 
 fun Shop.getCustomersFrom(city: City): List<Customer> {
+    return customers.filter { it.city == city }.toList()
     // Return a list of the customers who live in the given city
-    todoCollectionTask()
+    //todoCollectionTask()
 }
 
 
