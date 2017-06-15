@@ -1,5 +1,7 @@
 package ii_collections
 
+import java.util.*
+
 fun example8() {
     val numbers = listOf(1, 3, -4, 2, -11)
 
@@ -11,6 +13,11 @@ fun example8() {
 }
 
 fun Shop.getCustomersWithMoreUndeliveredOrdersThanDelivered(): Set<Customer> {
+    return this.customers.filter {
+        val (del, undel) = it.orders.partition { it.isDelivered }
+        undel.size > del.size
+    }.toSet()
     // Return customers who have more undelivered orders than delivered
-    todoCollectionTask()
+    //return Collections.emptySet()
+    //todoCollectionTask()
 }
